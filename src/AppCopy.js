@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Switch} from 'react-router-dom';
 import BSNavbar from "./components/elements/navbar/Navbar";
 import About from "./components/pages/About";
 import Home from "./components/pages/Home";
@@ -11,7 +11,7 @@ function App() {
   return (
       <Router>
     <div className="App">
-      <BSNavbar />
+        <BSNavbar />
       <div className="content">
         <Routes>
           <Route exact path='/' element={<Home/>} />
