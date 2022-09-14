@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Switch} from 'react-router-dom'
 import BSNavbar from "./components/elements/navbar/Navbar";
 import About from "./components/pages/About";
 import Home from "./components/pages/Home";
-import Json from "./components/pages/Json";
-import LorCard from "./components/pages/Card";
+import Json from "./components/pages/old/Json";
+import LorCard from "./components/pages/old/Card";
 
 function App() {
   return (

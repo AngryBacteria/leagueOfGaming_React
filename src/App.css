@@ -1,3 +1,45 @@
+:root {
+  --main-bg-color: #2d3848;
+  --second-bg-color : #3a4556;
+}
+
 body {
   padding-top: 100px;
+  background-color: var(--main-bg-color);
+  color: white;
 }
+
+.card{
+  background-color: var(--second-bg-color);
+  color: white;
+}
+
+.table {
+  color: white;
+}
+
+.table-hover tbody tr:hover td {
+  background: var(--second-bg-color);
+  color: white;
+}
+
+.progress {
+  background-color: var(--second-bg-color);
+}
+
+.historyVictory {
+  border-left-color: #2deb90;
+  border-left-style: inset;
+  border-left-width: 7px;
+  background-color: var(--second-bg-color);
+  margin: 20px;
+}
+
+.historyDefeat {
+  border-left-color: #ff5859;
+  border-left-style: inset;
+  border-left-width: 7px;
+  background-color: var(--second-bg-color);
+  margin: 20px;
+}
+

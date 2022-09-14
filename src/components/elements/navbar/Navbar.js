@@ -4,16 +4,29 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from "react-bootstrap/Image";
-import React from "react";
+import React, {useState} from "react";
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import {useNavigate} from "react-router";
 
 import githubIcon from "./GitHub-Mark-Light-64px.png"
 
 
 const GenNavbar = () => {
+
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const navigate = useNavigate();
+    const handleSubmit = event => {
+        event.preventDefault();
+        navigate(`/summoner/${searchTerm}`);
+    };
+
+
     return (
         <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
             <Container fluid>
-                <Navbar.Brand href="/">League of Gaming</Navbar.Brand>
+                <Navbar.Brand href="/">League of Gayming</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
@@ -21,14 +34,10 @@ const GenNavbar = () => {
                         <Nav.Link href="/about">About</Nav.Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="json">Json</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Another action
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Item href="/data">Data</NavDropdown.Item>
+                            <NavDropdown.Item href="/">Something</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Separated link
-                            </NavDropdown.Item>
+                            <NavDropdown.Item href="/">Separated link</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <Nav className="re-auto">
@@ -36,6 +45,19 @@ const GenNavbar = () => {
                             <Image src={githubIcon} style={{width : 35}}></Image>
                         </Nav.Link>
                     </Nav>
+                    <Form className="d-flex" onSubmit={handleSubmit}>
+                        <Form.Control
+                            type="search"
+                            placeholder="Search"
+                            className="me-2"
+                            aria-label="Search"
+                            value={searchTerm}
+                            onChange={(event) => setSearchTerm(event.target.value)}
+                        />
+                        <Button variant="primary" type="submit">
+                            Submit
+                        </Button>
+                    </Form>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

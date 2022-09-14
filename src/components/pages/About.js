@@ -8,6 +8,7 @@ const About = () => {
                 being a web dev
             </h1>
         </div>
+
     );
 };
 

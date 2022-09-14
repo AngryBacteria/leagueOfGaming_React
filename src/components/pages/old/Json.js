@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from '../../set5.json'
+import Cards from '../../../set5.json'
 import Card from "react-bootstrap/Card";
 
 const Json = () => {
