@@ -1,12 +1,12 @@
 import React from "react";
 import {useParams} from "react-router-dom";
-import useFetch from "../scripts/useFetch";
+import useFetch from "../../scripts/useFetch";
 import Card from "react-bootstrap/Card";
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import MatchHistory from "../elements/SummonerMatchHistory";
+import MatchHistory from "./SummonerMatchHistory";
 
 
 

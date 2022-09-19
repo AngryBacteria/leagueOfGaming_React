@@ -6,10 +6,11 @@ import About from "./components/pages/About";
 import Home from "./components/pages/Home";
 import Json from "./components/pages/old/Json";
 import LorCard from "./components/pages/old/Card";
-import Summoner from "./components/pages/Summoner";
+import Summoner from "./components/pages/Summoner/Summoner";
 import Data from "./components/pages/Data/Data";
 import GameData from "./components/pages/Data/GameData";
 import SummonerData from "./components/pages/Data/SummonerData";
+import Game from "./components/pages/Game/Game";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route exact path='/data/games' element={<GameData/>} />
           <Route exact path='/card/:cardCode' element={<LorCard/>} />
           <Route exact path='/summoner/:name' element={<Summoner/>} />
+          <Route exact path='/game/:gameurl' element={<Game/>} />
         </Routes>
       </div>
     </div>
