@@ -5,7 +5,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 const GameData = () => {
 
-    const { error, isPending, data: games } = useFetch(`http://localhost:8080/api/game/`, "Game")
+    const { error, isPending, data: games } = useFetch(`http://localhost:8080/api/game/db/`, "Game")
 
     return (
         <div>
