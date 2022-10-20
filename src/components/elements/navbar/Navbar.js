@@ -32,13 +32,9 @@ const GenNavbar = () => {
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/about">About</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="json">Json</NavDropdown.Item>
-                            <NavDropdown.Item href="/data">Data</NavDropdown.Item>
-                            <NavDropdown.Item href="/">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="/">Separated link</NavDropdown.Item>
-                        </NavDropdown>
+                        <Nav.Link href="/json">Json</Nav.Link>
+                        <Nav.Link href="/data">Data</Nav.Link>
+                        <Nav.Link href="/chart">Chart</Nav.Link>
                     </Nav>
                     <Nav className="re-auto">
                         <Nav.Link href="https://github.com/AngryBacteria">

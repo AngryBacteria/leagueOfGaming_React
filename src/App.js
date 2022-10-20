@@ -11,6 +11,7 @@ import Data from "./components/pages/Data/Data";
 import GameData from "./components/pages/Data/GameData";
 import SummonerData from "./components/pages/Data/SummonerData";
 import Game from "./components/pages/Game/Game";
+import MyCharts from "./components/pages/Graph/MyCharts";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route exact path='/card/:cardCode' element={<LorCard/>} />
           <Route exact path='/summoner/:name' element={<Summoner/>} />
           <Route exact path='/game/:gameurl' element={<Game/>} />
+          <Route exact path='/chart' element={<MyCharts/>} />
         </Routes>
       </div>
     </div>

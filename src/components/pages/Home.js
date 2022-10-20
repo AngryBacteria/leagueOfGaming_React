@@ -14,10 +14,20 @@ const Home = () => {
 
     return (
         <div>
-        {leaderboard &&
+            {error &&
+                <div className="alert alert-danger" role="alert">
+                    {error}
+                </div>
+            }
+            {isPending &&
+                <button className="btn btn-Secondary" type="button" disabled>
+                    <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                </button>
+            }
+            {leaderboard &&
             <div>
                 <h1>LEAGUE OF Gaming</h1>
-                {/*<p>{JSON.stringify(leaderboard, null, 4)}</p>*/}
                 <br/>
                 <Container fluid>
                     <Row>
