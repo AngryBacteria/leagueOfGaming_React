@@ -32,7 +32,6 @@ const GenNavbar = () => {
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/about">About</Nav.Link>
-                        <Nav.Link href="/json">Json</Nav.Link>
                         <Nav.Link href="/data">Data</Nav.Link>
                         <Nav.Link href="/chart">Chart</Nav.Link>
                     </Nav>

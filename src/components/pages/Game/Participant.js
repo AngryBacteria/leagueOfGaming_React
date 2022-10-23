@@ -9,11 +9,6 @@ const Participant = (props) => {
 
     return (
         <div>
-            {/*<Container fluid={true}>*/}
-            {/*    <img width={50} src={iconUrl + props.data.championId + ".png"}/>*/}
-            {/*    <a href={`/summoner/${props.data.summonerName}`}>{props.data.summonerName}</a> - {props.data.teamPosition}*/}
-            {/*</Container>*/}
-
             <div className="container">
                 <div className="row">
                     <div className="col-auto">

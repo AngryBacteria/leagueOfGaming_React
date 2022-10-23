@@ -4,29 +4,24 @@ import useFetch from "../../scripts/useFetch";
 import {useParams} from "react-router-dom";
 import {apiBaseURL} from "../../scripts/Helper";
 
-const MyCharts = () => {
+const MyCharts = (props) => {
 
-    const { data: timeLineData, isPending: isPendingTimeLine, error: errorTimeLine } = useFetch(`${apiBaseURL()}/api/game/riot/timeline/EUW1_5998862549`, "TimeLine")
+    console.log(props.gameurl)
+    const { data: timeLineData, isPending: isPendingTimeLine, error: errorTimeLine } = useFetch(`${apiBaseURL()}/api/game/riot/timeline/${props.gameurl}`, "TimeLine")
 
-    var goldArrayTeam1 = [];
-    var goldArrayTeam2 = [];
+    var teamGoldDifferenceArray = [];
     console.log("Fetched")
     if (timeLineData){
-        for (var i=0; i< timeLineData.team1GoldTimeLine.length; i++) {
-            goldArrayTeam1.push(timeLineData.team1GoldTimeLine[i].gold);
-            goldArrayTeam2.push(timeLineData.team2GoldTimeLine[i].gold);
+        for (var i=0; i< timeLineData.teamGoldDifferenceArray.length; i++) {
+            teamGoldDifferenceArray.push(timeLineData.teamGoldDifferenceArray[i]);
         }
     }
 
     const series = [{
-        type: 'line',
-        name: "Team1",
-        data: goldArrayTeam1
+        type: 'area',
+        name: "Team1-Team2",
+        data: teamGoldDifferenceArray
 
-    }, {
-        type: 'line',
-        name: "Team2",
-        data: goldArrayTeam2
     }];
     const options = { //data on the x-axis
         chart: {
@@ -52,7 +47,7 @@ const MyCharts = () => {
         },
 
         xaxis: {
-            categories: goldArrayTeam1.length
+            categories: teamGoldDifferenceArray.length
         }
     };
 

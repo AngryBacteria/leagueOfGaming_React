@@ -7,18 +7,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MatchHistory from "./SummonerMatchHistory";
-
-
+import {apiBaseURL} from "../../scripts/Helper";
 
 
 const Summoner = () => {
 
     const {name} = useParams()
-    const { data: summonerStats, isPending: isPendingStats, error: errorStats } = useFetch(`http://localhost:8080/api/summoner/stats/name/${name}`, "Summoner stats")
-
-    const { data: dataSummoner, isPending: isPendingSummoner, error : errorSummoner } = useFetch(`http://localhost:8080/api/summoner/name/${name}`, "Summoner")
-
-
+    const { data: summonerStats, isPending: isPendingStats, error: errorStats } = useFetch(`${apiBaseURL()}/api/summoner/stats/name/${name}`, "Summoner stats")
 
     return (
         <div>
@@ -96,6 +91,7 @@ const Summoner = () => {
                             </Col>
                         </Row>
                     </Container>
+                    <MatchHistory name={name}/>
                 </div>
                 }
             </div>
@@ -103,16 +99,6 @@ const Summoner = () => {
             <br/>
             <br/>
             <br/>
-            <div>
-                {errorSummoner &&
-                    <div className="alert alert-danger" role="alert">
-                        {errorSummoner}
-                    </div>
-                }
-                {dataSummoner &&
-                    <MatchHistory dataSummoner={dataSummoner}/>
-                }
-            </div>
         </div>
     );
 };

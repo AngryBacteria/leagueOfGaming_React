@@ -2,10 +2,11 @@ import React from 'react';
 import useFetch from "../../scripts/useFetch";
 import Table from "react-bootstrap/Table";
 import Dropdown from "react-bootstrap/Dropdown";
+import {apiBaseURL} from "../../scripts/Helper";
 
 const SummonerData = () => {
 
-    const { error, isPending, data: summoners } = useFetch(`http://localhost:8080/api/summoner/`, "Summoner")
+    const { error, isPending, data: summoners } = useFetch(`${apiBaseURL()}/api/summoner/`, "Summoner")
 
     return (
         <div>

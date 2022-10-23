@@ -5,11 +5,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import LeaderboardComponent from "../elements/Leaderboard";
+import {apiBaseURL} from "../scripts/Helper";
 
 
 const Home = () => {
 
-    const { error, isPending, data: leaderboard } = useFetch(`http://localhost:8080/api/leaderboard/`, "Leaderboard")
+    const { error, isPending, data: leaderboard } = useFetch(`${apiBaseURL()}/api/leaderboard/`, "Leaderboard")
 
 
     return (
