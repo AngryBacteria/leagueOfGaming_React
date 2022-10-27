@@ -30,10 +30,7 @@ const Summoner = () => {
                 </button>
             }
             {summonerStats &&
-
                 <div>
-                    {/*<p>{JSON.stringify(summonerStats, null, 4)}</p>*/}
-
                     <Container fluid={true}>
                         <Row>
                             <Col sm={2}>

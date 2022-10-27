@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom";
 import useFetch from "../../scripts/useFetch";
 import Participant from "./Participant";
 import Container from 'react-bootstrap/Container';
-import MyCharts2 from "../Graph/MyCharts2";
+import MyCharts2 from "../Graph/TeamGoldGraph";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import {apiBaseURL} from "../../scripts/Helper";

@@ -47,7 +47,16 @@ const MyCharts = (props) => {
         },
 
         xaxis: {
-            categories: teamGoldDifferenceArray.length
+            categories: teamGoldDifferenceArray.length,
+            title: {
+                text : "Minute",
+                hideOverlappingLabels: true
+            }
+        },
+        yaxis: {
+            title: {
+                text : "Gold Difference"
+            }
         }
     };
 
