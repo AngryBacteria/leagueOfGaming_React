@@ -9,7 +9,7 @@ import Data from "./components/pages/Data/Data";
 import GameData from "./components/pages/Data/GameData";
 import SummonerData from "./components/pages/Data/SummonerData";
 import Game from "./components/pages/Game/Game";
-import MyCharts from "./components/pages/Graph/TeamGoldBarChart";
+import AreaChart from "./components/pages/Graph/TeamGoldAreaChart";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route exact path='/data/games' element={<GameData/>} />
           <Route exact path='/summoner/:name' element={<Summoner/>} />
           <Route exact path='/game/:gameurl' element={<Game/>} />
-          <Route exact path='/chart' element={<MyCharts/>} />
+          <Route exact path='/chart' element={<AreaChart/>} />
         </Routes>
       </div>
     </div>

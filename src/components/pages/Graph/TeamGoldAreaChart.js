@@ -4,7 +4,7 @@ import useFetch from "../../scripts/useFetch";
 import {useParams} from "react-router-dom";
 import {apiBaseURL} from "../../scripts/Helper";
 
-const MyCharts = (props) => {
+const AreaChart = (props) => {
 
     console.log(props.gameurl)
     const { data: timeLineData, isPending: isPendingTimeLine, error: errorTimeLine } = useFetch(`${apiBaseURL()}/api/game/riot/timeline/${props.gameurl}`, "TimeLine")
@@ -65,4 +65,4 @@ const MyCharts = (props) => {
     )
 }
 
-export default MyCharts;
+export default AreaChart;

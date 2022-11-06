@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 const Participant = (props) => {
 
     const iconUrl = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/"
+    const emptySP = "https://raw.communitydragon.org/latest/game/assets/spells/icons2d/summoner_empty.png"
 
     return (
         <div>
@@ -13,10 +14,10 @@ const Participant = (props) => {
                 <div className="row">
                     <div className="col-auto">
                         <div className="col">
-                            <img width={25} src={iconUrl + props.data.championId + ".png"}/>
+                            <img width={25} src={emptySP}/>
                         </div>
                         <div className="col">
-                            <img width={25} src={iconUrl + props.data.championId + ".png"}/>
+                            <img width={25} src={emptySP}/>
                         </div>
                     </div>
                     <div className="col-auto"><img width={50} src={iconUrl + props.data.championId + ".png"}/></div>
