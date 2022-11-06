@@ -9,7 +9,7 @@ import Data from "./components/pages/Data/Data";
 import GameData from "./components/pages/Data/GameData";
 import SummonerData from "./components/pages/Data/SummonerData";
 import Game from "./components/pages/Game/Game";
-import MyCharts from "./components/pages/Graph/MyCharts2";
+import MyCharts from "./components/pages/Graph/TeamGoldBarChart";
 
 function App() {
   return (
