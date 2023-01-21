@@ -1,4 +1,4 @@
-# THIS IS A WORK IN PROGRESS
+# This Project is deprecated. I am working on a rebuild of this Website with VueJS and Express
 # League of Gaming Website
 
 ## Reasons
